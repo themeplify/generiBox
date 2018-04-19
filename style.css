@@ -4,6 +4,10 @@
 }
 img{
 	max-width: 100%;
+} 
+select.form-control {
+    background-image: url(images/down-arrow.png);
+    background-size: auto;
 }
 .vertical-middle{
 	top: 50%;
@@ -18,7 +22,8 @@ img{
 	top: 50%;
 	transform: translate(-50%, -50%);
 }
-.form-control:focus{
+.form-control:focus, 
+	.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus{
 	border-color: transparent;
     outline: none;
     box-shadow: none;
@@ -35,8 +40,9 @@ img{
 .site-logo{
 	position: absolute;
 	top: 50px;
-	left: 50px;
+	left: 39px;
 	z-index: 9;
+	max-width: 135px;
 }
 .copy-right{
 	position: absolute;
@@ -231,15 +237,37 @@ img{
 .right-step{
 	color: #fff;
 }
-.step-clm input[type="text"]{
+.step-clm .form-control{
 	height: 56px;
 	padding: 5px 25px;
-	font-size: 16px;
+	font-size: 14px;
+	color: #989797;
 }
-.right-step input[type="text"]{
-	background: #e4e4e4;
+.step-clm .form-control::placeholder{
+	color: #989797;
 }
-
+.right-step .form-control{
+	background-color: #e4e4e4;
+}
+.left-step .form-control{
+	background-color: #d9d9d9;
+}
+.step-clm .btn{
+	padding: 12px;
+	text-transform: uppercase;
+	border-radius: 0;
+	border:0;
+	box-shadow: 3px 4px 6px rgba(0,0,0,0.1);
+}
+.left-step .btn{
+	background: #707070;
+}
+.right-step .btn{
+	background: #f06600;
+}
+.right-step p, a{
+	color: #fff;
+}
 /*step1*/
 .search-region-text{
 	font-size: 10px;
@@ -259,4 +287,40 @@ img{
 	height: 2px;
 	background: #fff;
 	margin: -17px 0 0 0;
+}
+/*step2*/
+.forgot-pass{
+	color: #85a9f2;
+	font-size: 13px;
+	margin: 13px 0 30px;
+	display: inline-block;
+}
+.forgot-pass:hover{
+	color: #fff;
+}
+.custom-checkbox label{
+	font-size: 12px;
+	color: #959595;
+	text-align: left;
+}
+.custom-control-label::before{
+	background-color: transparent;
+    border: solid 1px #bcbcbc;
+    top: .05rem;
+}
+.custom-control-label::after{
+    top: .05rem;
+    cursor: pointer;
+}	
+.custom-control-input:focus~.custom-control-label::before {
+    box-shadow: none;
+}
+.step-2 .left-step .form-group{
+	margin-bottom: 8px;
+}
+.step-2 form{
+	padding-bottom: 10px;
+}
+.step-2 .custom-checkbox{
+	margin: 15px 0 25px;
 }
