@@ -7,10 +7,8 @@
 	target.click(function() {
 		$(this).addClass('active').siblings('li.active').addClass('complete');
 		var getStep = $(this).data('target');
-		console.log(getStep);
 		$('.steps-holder.' + getStep).fadeIn().siblings('.steps-holder').fadeOut();
-
+		// $("html, body").animate({ scrollTop: 0 }, "200");
 	});
-
 
 })(jQuery);
