@@ -22,8 +22,8 @@ function hightlightFeature(e){
 	layer.setStyle(
 	  {
 	    weight: 2,
-	    fillColor: '#eb6c0f',
-	    color: '#c64107'
+	    fillColor: '#f06600',
+	    color: '#0b3a8c'
 	  }
 	);
 
@@ -43,15 +43,7 @@ function zoomToFeature(e){
 	    var popup = L.popup()
 	    .setLatLng(popLocation)
 	    .setContent(regionName)
-	    .openOn(map); 
-	    var layer = e.target; 
-	layer.setStyle(
-	  {
-	    weight: 2,
-	    fillColor: '#eb6c0f',
-	    color: '#c64107'
-	  }
-	);        
+	    .openOn(map);     
 }
 
 
@@ -68,10 +60,10 @@ function countriesOnEachFeature(feature, layer){
 
 function countriesStyle(feature){
   return{
-    fillColor: '#263e89',
+    fillColor: '#1260e9',
     weight: 2,
     opacity: 1,
-    color: '#091c58',
+    color: '#0b3b8e',
     fillOpacity: 1
   }
 }

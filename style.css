@@ -421,6 +421,7 @@ select.form-control {
   background: transparent;
   margin: 0 auto;
   cursor: initial;
+  margin-top: -32px;
 }
 
 /*Resposnive*/
