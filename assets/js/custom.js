@@ -12,3 +12,86 @@
 	});
 
 })(jQuery);
+
+// Leaflet
+
+var countriesLayer;
+
+function hightlightFeature(e){
+	var layer = e.target;
+	layer.setStyle(
+	  {
+	    weight: 2,
+	    fillColor: '#eb6c0f',
+	    color: '#c64107'
+	  }
+	);
+
+	if(!L.Browser.ie && !L.Browser.opera){
+	  layer.bringToFront();
+	}
+}
+
+function resetHighlight(e){
+	countriesLayer.resetStyle(e.target);
+}
+
+function zoomToFeature(e){
+	//map.fitBounds(e.target.getBounds());
+	var popLocation= e.latlng;
+	var regionName = e.target.feature.properties.nom;
+	    var popup = L.popup()
+	    .setLatLng(popLocation)
+	    .setContent(regionName)
+	    .openOn(map); 
+	    var layer = e.target; 
+	layer.setStyle(
+	  {
+	    weight: 2,
+	    fillColor: '#eb6c0f',
+	    color: '#c64107'
+	  }
+	);        
+}
+
+
+function countriesOnEachFeature(feature, layer){
+	layer.on(
+	  {
+	    mouseover: hightlightFeature,
+	    mouseout: resetHighlight,
+	    click: zoomToFeature
+	  }
+	);
+}
+
+
+function countriesStyle(feature){
+  return{
+    fillColor: '#263e89',
+    weight: 2,
+    opacity: 1,
+    color: '#091c58',
+    fillOpacity: 1
+  }
+}
+
+var map = L.map('map', {
+  
+    zoomControl:false
+});
+
+map.scrollWheelZoom.disable();
+map.dragging.disable();
+map.doubleClickZoom.disable();
+
+
+countriesLayer = L.geoJson(
+  countries,
+    {
+      style : countriesStyle,
+      onEachFeature: countriesOnEachFeature
+
+    }
+  ).addTo(map);
+map.fitBounds(countriesLayer.getBounds());

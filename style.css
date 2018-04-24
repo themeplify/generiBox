@@ -223,6 +223,9 @@ select.form-control {
 	display: none;
 	position: relative;
 }
+.steps-holder.step-1{
+	display: block;
+}
 .steps-holder:after, .steps-holder:before{
 	content: '';
 	position: absolute;
@@ -406,6 +409,18 @@ select.form-control {
 }
 .left-step .purpose-link{
 	color:#535353;
+}
+/*leaflet*/
+.leaflet-bottom.leaflet-right{
+	display: none;
+}
+#map{
+  height: 400px;
+  width: 500px;
+  max-width: 100%;
+  background: transparent;
+  margin: 0 auto;
+  cursor: initial;
 }
 
 /*Resposnive*/

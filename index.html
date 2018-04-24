@@ -8,11 +8,14 @@
   
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+    <!-- leaflet -->
+    <link rel="stylesheet" href="lib/leaflet/leaflet.css" />
+    <script src="lib/leaflet/leaflet.js"></script>
+    <script src="data/countries.geojson"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- custom CSS -->
     <link rel="stylesheet" href="style.css">
-
   </head>
   <body>
     <!-- side navigation start -->
@@ -45,7 +48,8 @@
           <div class="form-step text-center">
             <div class="step-clm left-step">
               <h2>Select your Region</h2>
-              <img src="images/map.png" alt="map" width="400">
+              <!-- <img src="images/map.png" alt="map" width="400"> -->
+              <div id="map"></div>
             </div>
             <div class="step-clm right-step">
               <h2>Search for Region</h2>
@@ -154,6 +158,7 @@
     <!-- side navigation End -->
 
     <!-- Optional JavaScript -->
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
