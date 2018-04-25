@@ -223,6 +223,14 @@ select.form-control {
 	display: none;
 	position: relative;
 }
+@media screen and (min-width: 768px) {
+	.steps-holder{
+		position: absolute;
+		top: 0;
+		width: 100%;
+		right: 0;
+	}	
+}
 .steps-holder.step-1{
 	display: block;
 }
@@ -381,6 +389,10 @@ select.form-control {
     height: calc(100% - 20px);
     border-radius: 50%;
     border: 2px dashed #ccc;
+    transition: all 1s;
+}
+.purpose-link:hover .purpose-wrap:after{
+	transform: rotate(60deg);
 }
 .right-step .purpose-wrap:after{
 	border-color: #004ff0;
@@ -434,9 +446,10 @@ select.form-control {
 	border-radius: 0;
 	font-weight: bold;
 	text-transform: uppercase;
+	font-size: 10px;
 }
 .leaflet-popup-content {
-    margin: 7px 19px;
+    margin: 6px 19px;
     text-align: center;
 }
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {

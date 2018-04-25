@@ -3,11 +3,11 @@
 	// step navigation
 	var target = $('.step-indicator-wrap ul li');
 	target.first().addClass('active');
-	$('.step-form-container .steps-holder:nth-of-type(1)').fadeIn();
+	$('.step-form-container .steps-holder:nth-of-type(1)').fadeIn('slow');
 	target.click(function() {
 		$(this).addClass('active').siblings('li.active').addClass('complete');
 		var getStep = $(this).data('target');
-		$('.steps-holder.' + getStep).fadeIn().siblings('.steps-holder').fadeOut();
+		$('.steps-holder.' + getStep).fadeIn().siblings('.steps-holder').fadeOut('fast');
 		// $("html, body").animate({ scrollTop: 0 }, "200");
 	});
 
@@ -69,9 +69,9 @@ function countriesStyle(feature){
 }
 
 var map = L.map('map', {
-  
-    zoomControl:false
-});
+    	zoomControl:false
+	}
+).setView([148.86, 52.35], 50);
 
 map.scrollWheelZoom.disable();
 map.dragging.disable();
