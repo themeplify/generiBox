@@ -40,7 +40,7 @@ function zoomToFeature(e){
 	//map.fitBounds(e.target.getBounds());
 	var popLocation= e.latlng;
 	var regionName = e.target.feature.properties.nom;
-	    var popup = L.popup()
+	    var popup = L.popup({closeButton: false})
 	    .setLatLng(popLocation)
 	    .setContent(regionName)
 	    .openOn(map);     

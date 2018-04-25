@@ -268,6 +268,10 @@ select.form-control {
 .right-step{
 	color: #fff;
 }
+.step-1 .step-clm.left-step{
+	padding-left: 0;
+	padding-right: 0;
+}
 .step-clm .form-control{
 	height: 56px;
 	padding: 5px 25px;
@@ -422,6 +426,21 @@ select.form-control {
   margin: 0 auto;
   cursor: initial;
   margin-top: -32px;
+}
+.leaflet-popup{
+	pointer-events: none;
+}
+.leaflet-popup-content-wrapper{
+	border-radius: 0;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.leaflet-popup-content {
+    margin: 7px 19px;
+    text-align: center;
+}
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    box-shadow: 0 2px 0px rgba(8,54,200,0.8);
 }
 
 /*Resposnive*/
