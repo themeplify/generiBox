@@ -2,6 +2,19 @@
 *{
 	font-family: 'Poppins', sans-serif;
 }
+html{
+	font-size: 16px;
+}
+@media screen and (max-width: 1366px) {
+	html{
+		font-size: 12px;
+	}	
+}
+@media screen and (max-width: 1024px) {
+	html{
+		font-size: 11px;
+	}	
+}
 img{
 	max-width: 100%;
 } 
@@ -40,22 +53,22 @@ select.form-control {
 .site-logo{
 	position: absolute;
 	top: 50px;
-	left: 39px;
+	left: 3.375rem;
 	z-index: 100;
-	max-width: 135px;
+	max-width: 11.5rem;
 }
 .copy-right{
 	position: absolute;
 	bottom: 50px;
-	left: 30px;
+	left: 1.4375rem;
 	z-index: 100;
 	color: #7f7f7f;
-	font-size: 9px;	
+	font-size: 0.5625rem;	
 }
 
 /*step Indicator*/
 .step-indicator-wrap{
-    width: 70px;
+    width: 5.69rem;
     background: #fff;
     height: 100vh;
     margin: 0 0;
@@ -79,29 +92,29 @@ select.form-control {
 .step-indicator-wrap ul:after{
 	content: '';
 	position: absolute;
-	height: calc(100% - 50px);
+	height: calc(100% - 5.5rem);
 	width: 1px;
 	background: url('images/step-nav-border.png') repeat;
 	z-index: -1;
 	left: 0;
 	right: 0;
 	margin: auto;
-	top: 25px;
+	top: 2.5rem;
 }
 .step-indicator-wrap ul li{
     list-style: none;
     margin-bottom: 80px;
-    min-height: 35px;
+    min-height: 2.125rem;
     text-align: center;
     position: relative;
     cursor: pointer;
-    width: 25px;
+    width: 100%;
     margin: 0 auto 12vh;
 }
 .step-indicator-wrap ul li:after{
     content: '';
-    width: 16px;
-    height: 16px;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
     background: #fff;
     border: 2px solid #f06600;
@@ -121,40 +134,42 @@ select.form-control {
 }
 .step-indicator-wrap ul li.complete:after{
 	content: '✔';
-	line-height: 23px;
-	font-size: 17px;
+	line-height: 2.125rem;
+	font-size: 1.25rem;;
 	color: #fff;
 	background: var(--primary-color);
-    width: 25px;
-    height: 25px;
+    width: 2.125rem;
+    height: 2.125rem;
 }
 .step-indicator-wrap ul li .step-info{
     background: #fff;
-    padding: 6px 30px;
+    padding: 0.375rem 1.875rem;
     border-radius: 58px;
     position: relative;
     border: 2px solid #e7e5e5;
     flex-direction: column;
     left: 100%;
-    width: 171px;
+    width: 11.2rem;
+    min-width: 140px;
     text-align: left;
     transition: all 0.5s;
-    font-size: 13px;
-    line-height: 16px;
+    font-size: 0.95rem;
+    line-height: 1.2rem;
     color: #4c4c4c;
     box-shadow: 6px 8px 11px rgba(201, 201, 201, 0.3);
     z-index: 9;
-    margin: -11px 0 0 25px;
+    margin: 0 0 0 0.375rem;
     opacity: 0;
     pointer-events: none;
 }
 .step-indicator-wrap ul li:hover .step-info{
 	opacity: 1;
-	margin-left: 18px;
+	margin-left: -0.575rem;
 }
 .step-indicator-wrap ul li .step-info span{
 	display: block;
 	font-weight: 700;
+	font-size: 1rem;
 } 
 .step-info:after, .step-info:before {
 	right: 99%;
@@ -182,7 +197,7 @@ select.form-control {
 
 /*step form*/
 .step-form-container{
-	width: calc(100% - 70px);
+	width: calc(100% - 5.69rem);
 	margin: 0;
 	float: right;
 	position: relative;
@@ -209,14 +224,14 @@ select.form-control {
 .step-form-container .or{
 	position: absolute;
 	background: #fff;
-	width: 40px;
-	height: 40px;
+	width: 3.5625rem;
+	height: 3.5625rem;
 	border-radius: 50%;
 	text-align: center;
-	line-height: 39px;
+	line-height: 3.6rem;
 	z-index: 9;
 	font-weight: 700;
-	font-size: 12px;
+	font-size: 0.9rem;
 	color: var(--primary-color);
 }
 .steps-holder{
@@ -267,7 +282,7 @@ select.form-control {
 }
 .step-clm h2{
 	font-weight: 300;
-	font-size: 27px;
+	font-size: 2rem;
 	margin: 0 0 6vh;
 }
 .left-step{
@@ -281,9 +296,9 @@ select.form-control {
 	padding-right: 0;
 }
 .step-clm .form-control{
-	height: 56px;
-	padding: 5px 25px;
-	font-size: 14px;
+    height: 4.75rem;
+    padding: 1rem 2rem;
+	font-size: 1rem;
 	color: #989797;
 }
 .step-clm .form-control::placeholder{
@@ -296,27 +311,36 @@ select.form-control {
 	background-color: #d9d9d9;
 }
 .step-clm .btn{
-	padding: 12px;
+	padding: 1.3rem;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
 	text-transform: uppercase;
 	border-radius: 0;
 	border:0;
 	box-shadow: 3px 4px 6px rgba(0,0,0,0.1);
+	text-transform: uppercase;
 }
 .left-step .btn{
 	background: #707070;
 }
+.left-step .btn.btn-primary:focus, .left-step .btn.btn-primary:active, .left-step .btn.btn-primary:hover {
+	background: #5d5c5c;
+}
 .right-step .btn{
 	background: #f06600;
+}
+.right-step .btn.btn-primary:focus, .right-step .btn.btn-primary:active, .right-step .btn.btn-primary:hover{
+	background: #fb6e07;
 }
 .right-step p, a{
 	color: #fff;
 }
 /*step1*/
 .search-region-text{
-	font-size: 10px;
-	line-height: 17px;
+	font-size: 0.8rem;
+	line-height: 1.5rem;
 	text-align: left;
-	width: 250px;
+	width: 20rem;
 	max-width: 100%;
 	float: right;
 	position: absolute;
@@ -335,17 +359,18 @@ select.form-control {
 /*step2*/
 .forgot-pass{
 	color: #85a9f2;
-	font-size: 13px;
-	margin: 13px 0 30px;
+	font-size: 0.9rem;
+	margin: 1rem 0 2.5rem;
 	display: inline-block;
 }
 .forgot-pass:hover{
 	color: #fff;
 }
 .custom-checkbox label{
-	font-size: 12px;
+	font-size: 1rem;
 	color: #959595;
 	text-align: left;
+	font-size: 0.9rem;
 }
 .custom-control-label::before{
 	background-color: transparent;
@@ -356,26 +381,39 @@ select.form-control {
     top: .05rem;
     cursor: pointer;
 }	
+.custom-control-label::after, .custom-control-label::before{
+    width: 1.625rem;
+    height: 1.625rem;
+}
 .custom-control-input:focus~.custom-control-label::before {
     box-shadow: none;
 }
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #004ff0;
+}
 .step-2 .left-step .form-group{
-	margin-bottom: 8px;
+	margin-bottom: 0.9rem;
 }
 .step-2 form{
 	padding-bottom: 10px;
 }
 .step-2 .custom-checkbox{
-	margin: 15px 0 25px;
+	margin: 1.625rem 0 3.5rem;
+	padding-left: 3rem;
 }
 
 /*step3*/
 .purpose-wrap{
-	width: 250px;
-	height: 250px;
+	width: 20.75rem;
+	height: 20.75rem;
 	border-radius: 50%;
 	margin: 50px auto 0;
 	position: relative;
+    transition: all 0.3s;
+    box-shadow: 1px 1px 38px rgba(111,111,111,0.7);
+}
+.right-step .purpose-wrap{
+    box-shadow: 1px 1px 38px rgb(2, 57, 169);
 }
 .purpose-wrap:after{
 	content: '';
@@ -389,17 +427,16 @@ select.form-control {
     height: calc(100% - 20px);
     border-radius: 50%;
     border: 2px dashed #ccc;
-    transition: all 1s;
 }
-.purpose-link:hover .purpose-wrap:after{
-	transform: rotate(60deg);
+.purpose-link:hover .purpose-wrap{
+	transform: scale(1.05);
 }
 .right-step .purpose-wrap:after{
 	border-color: #004ff0;
 }
 .purpose-wrap img{
-	max-width: 110px;
-	max-height: 130px;
+	max-width: 10rem;
+	max-height: 11rem;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -417,9 +454,9 @@ select.form-control {
 	text-decoration: none;
 }
 .purpose-link p{
-	font-size: 11px;
-	line-height: 18px;
-	width: 345px;
+	font-size: 1rem;
+	line-height: 2rem;
+	width: 32.75rem;
 	max-width: 100%;
 	margin: 50px auto 15px;
 }
@@ -495,10 +532,10 @@ select.form-control {
 	    padding: 4px 21px;
         width: 140px;
         font-size: 12px;
-        margin: -11px 0 0 20px;
+        margin: -11px 0 0 5px;
 	}
 	.step-indicator-wrap ul li:hover .step-info{
-		margin-left: 12px;
+		margin-left: 0;
 	}
 	.step-form-container {
     	width: calc(100% - 50px);
@@ -608,4 +645,9 @@ select.form-control {
 		margin-top: 15px;
 	}
 
+}
+
+/*large*/
+@media screen and (min-width: 1367px) {
+	
 }
