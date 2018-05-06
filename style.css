@@ -651,3 +651,6 @@ select.form-control {
 @media screen and (min-width: 1367px) {
 	
 }
+.activeCountry{
+	fill: #f06600;
+}

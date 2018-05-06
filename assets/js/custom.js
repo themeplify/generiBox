@@ -50,8 +50,8 @@ function zoomToFeature(e){
 function countriesOnEachFeature(feature, layer){
 	layer.on(
 	  {
-	    mouseover: hightlightFeature,
-	    mouseout: resetHighlight,
+	    // mouseover: hightlightFeature,
+	    // mouseout: resetHighlight,
 	    click: zoomToFeature
 	  }
 	);
@@ -87,3 +87,13 @@ countriesLayer = L.geoJson(
     }
   ).addTo(map);
 map.fitBounds(countriesLayer.getBounds());
+
+
+
+(function($) {
+		$('.leaflet-clickable').click(function(){
+		$('.leaflet-clickable').removeClass('activeCountry');
+		$(this).addClass('activeCountry');
+	});
+
+})(jQuery);
