@@ -89,11 +89,14 @@ countriesLayer = L.geoJson(
 map.fitBounds(countriesLayer.getBounds());
 
 
+// leaflet with jquery
 
 (function($) {
 		$('.leaflet-clickable').click(function(){
 		$('.leaflet-clickable').removeClass('activeCountry');
 		$(this).addClass('activeCountry');
 	});
+
+	$('.leaflet-zoom-animated').attr('viewBox','-7 -47 521 487');
 
 })(jQuery);
