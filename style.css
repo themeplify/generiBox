@@ -649,7 +649,13 @@ select.form-control {
 
 /*large*/
 @media screen and (min-width: 1367px) {
-	
+	.leaflet-popup-content-wrapper{
+		font-size: 1em;
+	}
+	#map{
+		height: 545px;
+		width: 600px;
+	}
 }
 .activeCountry{
 	fill: #f06600;

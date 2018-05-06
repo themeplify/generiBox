@@ -99,4 +99,8 @@ map.fitBounds(countriesLayer.getBounds());
 
 	$('.leaflet-zoom-animated').attr('viewBox','-7 -47 521 487');
 
+	if($(window).width() >= 1367){
+		$('.leaflet-zoom-animated').attr('viewBox','73 17 449 504');
+	}
+
 })(jQuery);
